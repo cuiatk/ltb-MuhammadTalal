@@ -24,6 +24,7 @@ public class Driver {
 	Movie m3=new Movie("World WarZ",2);
 		
 		Customer me=new Customer("Muhammad");
+		Customer me2 = new Customer("Allah Ditta");
 		Rental r1=new Rental(m1,4);
 		Rental r2=new Rental(m2,5);
 		Rental r3=new Rental(m3,4);

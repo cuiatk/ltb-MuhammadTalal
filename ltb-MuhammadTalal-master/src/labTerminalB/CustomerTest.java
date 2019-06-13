@@ -27,24 +27,35 @@ public class CustomerTest {
 		}
 	}
 	@Test
-	
-	public void gettingRet() {
-		Movie m2=new Movie("Wrong Turn",1);
-		Rental rental =new Rental(m2,4);
-		double result=rental.
-	}
-	@Test
-	
-	public void gettingName() {
-		Movie m2=new Movie("WrongTurn",2);
-		Rental rental= new Rental(m2,4);
-		String result=rental.getMovie().getTitle();
-	}
-	/*
-	 * TODO 2			10 Marks
-	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
-	 * strategy basics i.e. input partition etc
-	 */
-	
+	public void testDaysrented() {
+		me.addRental(r1);
+		me.addRental(r2);
+		
+		String output2 = "Rental Record for Nadir\r\n" +
+		         "		Spancer 2.0\r\n "+
+				 "		Speed   0.0";	
+		if(output2.equals(me.statement()))
+		{
+			assert true;
+		}
 
-}
+	}
+	Rental r3= new Rental(m1,23);
+	Rental r4=new Rental(m2,4);
+
+	@Test
+	public void testAmountOwed()
+	{
+		
+		me.addRental(r1);
+		me.addRental(r2);
+		String output3 = "Rental Record for Nadir\r\n" +
+		             "   Spancer   33.5\r\n "+
+				     "   Speed     12.0\r\n"+
+		             "   Avengers  9.0\r\n"+
+				     "   Iron man  6.0";
+		if(output3.equals(me.statement()))
+		{
+			assert true;
+		}  
+	}}

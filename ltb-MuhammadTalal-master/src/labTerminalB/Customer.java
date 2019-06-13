@@ -17,6 +17,12 @@ public void addRental(Rental arg) {
 public String getName (){
 	return _name;
 }
+/*
+ * TODO 3	20 Marks Writing Specifications
+ * The function Statement displays the total rent of movies and their frequent renter points.
+ * @param: nothing
+ * @return: bill that contains customer name, movie name and their rent
+ */ 
 
 public String statement() {
 
@@ -30,10 +36,7 @@ public String statement() {
 
 	Rental rental = (Rental) rentals.nextElement();
 
-	//determine amounts for each line 
-	//thisAmount = rental.amount_Calculation();
-
-	// add frequent renter points 
+	
 	frequentRenterPoints += rental.getFrequentPoints(rental);
 
 	//show figures for this rental 
